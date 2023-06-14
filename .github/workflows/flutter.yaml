@@ -53,7 +53,8 @@ jobs:
               $dirs_to_analyse \
               --fatal-unused
             dart run dart_code_metrics:metrics \
-              check-unused-code --verbose \ 
+              check-unused-code \
+              --verbose  
               $dirs_to_analyse \
               --fatal-unused
           fi
