@@ -13,14 +13,9 @@ class Main extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme:
-        ColorScheme.fromSeed(seedColor: const Color.fromARGB(0, 0, 0, 0)),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(),
+      home: MyHomePage(),
     );
   }
 }
@@ -35,7 +30,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  Color background = const Color.fromARGB(0, 0, 0, 0);
+  static const parameterARGB = 0;
+  Color background = const Color.fromARGB(
+    parameterARGB,
+    parameterARGB,
+    parameterARGB,
+    parameterARGB,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -53,26 +54,28 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Color colorChanger() {
-    final rgb1 = Random().nextInt(256);
-    final rgb2 = Random().nextInt(256);
-    final rgb3 = Random().nextInt(256);
-    final rgb4 = Random().nextInt(256);
+    const parameterRandom = 100;
+    const parameterNextInt = 256;
+    final rgb1 = Random().nextInt(parameterNextInt);
+    final rgb2 = Random().nextInt(parameterNextInt);
+    final rgb3 = Random().nextInt(parameterNextInt);
+    final rgb4 = Random().nextInt(parameterNextInt);
 
     return background ==
-        const Color.fromARGB(
-          0,
-          0,
-          0,
-          0,
-        )
-    //This id done for the widget testing so that 1st time the color is,
-    // what is specified in widget test and the second time it is all random
+            const Color.fromARGB(
+              parameterARGB,
+              parameterARGB,
+              parameterARGB,
+              parameterARGB,
+            )
+        //This id done for the widget testing so that 1st time the color is,
+        // what is specified in widget test and the second time it is all random
         ? Color.fromARGB(
-      Random(100).nextInt(256),
-      Random(100).nextInt(256),
-      Random(100).nextInt(256),
-      Random(100).nextInt(256),
-    )
+            Random(parameterRandom).nextInt(parameterNextInt),
+            Random(parameterRandom).nextInt(parameterNextInt),
+            Random(parameterRandom).nextInt(parameterNextInt),
+            Random(parameterRandom).nextInt(parameterNextInt),
+          )
         : Color.fromARGB(rgb1, rgb2, rgb3, rgb4);
   }
 }
