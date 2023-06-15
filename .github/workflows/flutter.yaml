@@ -40,7 +40,7 @@ jobs:
           if [ -d test ]; then dirs_to_analyse+=" test"; fi
           if [ -d example ]; then dirs_to_analyse+=" example"; fi
 
-          if [ -z $dirs_to_analyse ]
+          if [ -n $dirs_to_analyse ]
           then
           echo "$dirs_to_analyze"
           ls -l /home/runner/work/solid_software/solid_software/
