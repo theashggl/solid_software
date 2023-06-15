@@ -42,6 +42,9 @@ jobs:
 
           if [ dirs_to_analyse != "" ]
           then
+          echo "$dirs_to_analyze"
+          ls -l /home/runner/work/solid_software/solid_software/
+          pwd /home/runner/work/solid_software/solid_software/
             dart run dart_code_metrics:metrics \
               analyze \
               $dirs_to_analyse \
