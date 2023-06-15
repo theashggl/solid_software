@@ -42,7 +42,6 @@ jobs:
 
           if [[ -n $dirs_to_analyse ]]
           then
-          dirs_to_analyse="${dirs_to_analyse:1}"
             dart run dart_code_metrics:metrics \
               analyze \
               $dirs_to_analyse \
