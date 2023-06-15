@@ -42,6 +42,7 @@ jobs:
 
           if [[ -n $dirs_to_analyse ]]
           then
+          dirs_to_analyse="${dirs_to_analyse:1}"
           echo "$dirs_to_analyze"
           ls -l /home/runner/work/solid_software/solid_software/
           pwd /home/runner/work/solid_software/solid_software/
@@ -55,7 +56,7 @@ jobs:
               check-unused-files \
               $dirs_to_analyse \
               --fatal-unused
-            echo dart run dart_code_metrics:metrics check-unused-code "$dirs_to_analyse" --fatal-unused --verbose 
+            dart run dart_code_metrics:metrics check-unused-code $dirs_to_analyse --fatal-unused --verbose 
           fi
 
       - name: Check formatting
