@@ -57,9 +57,9 @@ jobs:
               --fatal-unused
             echo dart run dart_code_metrics:metrics \
               check-unused-code \  
-              $dirs_to_analyse/lib \
+              $dirs_to_analyse \
               --fatal-unused \
-              --[no-]verbose 
+              --verbose 
           fi
 
       - name: Check formatting
