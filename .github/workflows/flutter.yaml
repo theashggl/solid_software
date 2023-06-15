@@ -52,7 +52,10 @@ jobs:
               check-unused-files \
               $dirs_to_analyse \
               --fatal-unused
-            dart run dart_code_metrics:metrics check-unused-code $dirs_to_analyse --fatal-unused 
+            dart run dart_code_metrics:metrics \
+              check-unused-code 
+              $dirs_to_analyse \
+              --fatal-unused 
           fi
 
       - name: Check formatting
