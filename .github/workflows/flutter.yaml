@@ -54,7 +54,7 @@ jobs:
               --fatal-unused
             dart run dart_code_metrics:metrics \
               check-unused-code \  
-              $dirs_to_analyse \
+              $dirs_to_analyse/lib/main.dart \
               --fatal-unused \
               --[no-]verbose 
           fi
