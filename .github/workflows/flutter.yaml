@@ -56,7 +56,7 @@ jobs:
               check-unused-code \  
               $dirs_to_analyse \
               --fatal-unused \
-              --verbose 
+              --[no-]verbose 
           fi
 
       - name: Check formatting
