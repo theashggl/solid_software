@@ -55,11 +55,7 @@ jobs:
               check-unused-files \
               $dirs_to_analyse \
               --fatal-unused
-            echo dart run dart_code_metrics:metrics \
-              check-unused-code \  
-              $dirs_to_analyse \
-              --fatal-unused \
-              --verbose 
+            echo dart run dart_code_metrics:metrics check-unused-code "$dirs_to_analyse" --fatal-unused --verbose 
           fi
 
       - name: Check formatting
