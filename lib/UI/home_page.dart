@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:solid_software/Model/background_color.dart';
 
@@ -31,7 +30,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-  Color background = backgroundColor.background;
+  Color? background = backgroundColor.background;
   
     return GestureDetector(
       onTap: () {

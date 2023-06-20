@@ -4,7 +4,8 @@ import 'dart:ui';
 
 ///Class containing the logic for changing background color
 class BackgroundColor {
-  late Color background;
+  ///Color class instance to be used in UI
+  Color? background;
 
   ///Constructor to initialize background variable
   BackgroundColor() {
@@ -18,7 +19,7 @@ class BackgroundColor {
   }
 
   ///Method responsible for change of colour of background.
-  Color colorChanger() {
+  Color? colorChanger() {
     const parameterRandom = 100;
     const parameterNextInt = 256;
     int parameterARGB = 0;
