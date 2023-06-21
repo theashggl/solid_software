@@ -6,11 +6,10 @@ void main() {
   testWidgets(
       'Widget test to find Text "Hello World" test and color change test',
       (WidgetTester tester) async {
-    // Build our app and trigger a frame.
+    const int aRGBParameter = 74;
     await tester.pumpWidget(const HomePage());
     final centerText = find.text("Hello there");
     final gestureDetector = find.byType(GestureDetector);
-    // Verify that our counter starts at 0.
     expect(centerText, findsOneWidget);
     expect(gestureDetector, findsOneWidget);
     expect(
@@ -21,7 +20,12 @@ void main() {
     await tester.pumpAndSettle();
     expect(
       (tester.widget(find.byType(Scaffold)) as Scaffold).backgroundColor,
-      const Color.fromARGB(74, 74, 74, 74),
+      const Color.fromARGB(
+        aRGBParameter,
+        aRGBParameter,
+        aRGBParameter,
+        aRGBParameter,
+      ),
     );
   });
 }

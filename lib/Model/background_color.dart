@@ -1,4 +1,3 @@
-//class will return the background color object to use in homepage
 import 'dart:math';
 import 'dart:ui';
 
@@ -34,7 +33,7 @@ class BackgroundColor {
           parameterARGB,
           parameterARGB,
         ))
-    //This is done for the widget testing so that 1st time the color is,
+    //Case created done for the widget testing so that 1st time the color is,
     // what is specified in widget test and the second time it is all random
     {
       background = Color.fromARGB(
