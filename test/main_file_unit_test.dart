@@ -1,10 +1,6 @@
-import 'dart:math';
 import 'dart:ui';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mocktail/mocktail.dart';
 import 'package:solid_software/Model/background_color.dart';
-
-class MockRandom extends Mock implements Random {}
 
 void main() {
   test("Unit test of main method", () {
